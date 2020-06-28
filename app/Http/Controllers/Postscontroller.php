@@ -64,7 +64,7 @@ class Postscontroller extends Controller
 
         $fileNameToStore = $filename.'_'.time().'.'.$extension;
 
-        $path = $request->file('cover_image')->storeAs('public/cover_images',$fileNameToStore);
+        $path = $request->file('cover_image')->storeAs('/cover_images',$fileNameToStore);
     } else{
         $fileNameToStore = 'noimage.jpg';
     }
@@ -169,7 +169,7 @@ class Postscontroller extends Controller
         }
         $post->delete();
 
-        return redirect('/posts')->with('success', 'Post Post Removed');
+        return redirect('/posts')->with('success', 'Post Po st Removed');
    
     }
 }
