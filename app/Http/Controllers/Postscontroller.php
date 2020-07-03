@@ -64,7 +64,11 @@ class Postscontroller extends Controller
 
         $fileNameToStore = $filename.'_'.time().'.'.$extension;
 
-        $path = $request->file('cover_image')->storeAs('/storage/app/public/cover_images',$fileNameToStore);
+        $path = $request->file('cover_image')->storeAs(
+            'my-file',
+            $fileNameToStore,
+            's3'
+        );
     } else{
         $fileNameToStore = 'noimage.jpg';
     }

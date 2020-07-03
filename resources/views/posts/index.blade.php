@@ -7,7 +7,7 @@
                 <div class="well"> 
                     <div class="row">
                         <div class="col-md-4 col-sm-4">
-                            <img style="width:100%" src="storage/cover_images/{{$post->cover_image}}">
+                            <img style="width:100%" src="https://preshyjones.s3.eu-west-2.amazonaws.com/my-file/{{$post->cover_image}}">
                         </div>
                         <div class="col-m8-4 col-sm-8">
                             <h3><a href="{{ url('posts/'.$post->id) }}">{{$post->title}}</a></h3>
