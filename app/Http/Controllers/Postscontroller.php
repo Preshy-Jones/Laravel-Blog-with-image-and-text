@@ -69,6 +69,8 @@ class Postscontroller extends Controller
             $fileNameToStore,
             's3'
         );
+
+        
     } else{
         $fileNameToStore = 'noimage.jpg';
     }
